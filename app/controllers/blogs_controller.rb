@@ -3,6 +3,10 @@ class BlogsController < ApplicationController
     @blogs = Blog.all
   end
 
+  def new
+    @blog = Blog.new
+  end
+
   def create
     @blog = Blog.new(blog_params)
     if @blog.save
