@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
-  get 'blogs/index'
-
-  get 'blogs/new'
-
-  get 'blogs/show'
-
-  get 'blogs/edit'
+  resources :blogs, only: [:index, :show, :new, :edit]
 
   root 'top#index'
 
