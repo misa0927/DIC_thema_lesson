@@ -1,10 +1,12 @@
 class BlogsController < ApplicationController
+before_action :authenticate_user!
 
   def index
   end
 
   def show
-  end
+		@blog = Blog.find(params[:id])
+	end
 
   def new
   end
@@ -20,6 +22,7 @@ class BlogsController < ApplicationController
 
   def update
   end
+  
 
   private
     def blog_params
