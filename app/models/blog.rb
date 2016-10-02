@@ -1,4 +1,3 @@
 class Blog < ActiveRecord::Base
-  validates :title, precense: true
-  validates :content, length: { maximum: 140 }
+   before_action :authenticate_user! 
 end
