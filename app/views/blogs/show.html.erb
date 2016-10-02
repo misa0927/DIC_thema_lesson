@@ -1,2 +1,5 @@
-<h1>Blogs#show</h1>
-<p>Find me in app/views/blogs/show.html.erb</p>
+<%= @blog.title %>
+<%= @blog.content %>
+
+<%= link_to "編集" edit_blog_path(@blog) %>
+<%= link_to "一覧へ" blogs_path(@blog) %>
