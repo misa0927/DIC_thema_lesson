@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'blogs/index'
+
+  get 'blogs/new'
+
+  get 'blogs/show'
+
+  get 'blogs/edit'
+
   root 'top#index'
 
   devise_for :users
