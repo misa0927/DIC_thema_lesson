@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :books, only: [:index, :new, :create]
+
   resources :blogs
   root 'top#index'
 
